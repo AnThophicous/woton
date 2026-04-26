@@ -1,12 +1,9 @@
 # Woton
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/AnThophicous/woton/main/Images/Banner.png" alt="Woton banner" width="900">
+  <img src="https://raw.githubusercontent.com/AnThophicous/woton/main/Images/Banner.png" alt="Woton banner" width="600">
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/AnThophicous/woton/main/Images/Woton.png" alt="Woton logo" width="180">
-</p>
 
 Woton is an encrypted embedded database for Node.js, written in TypeScript and exposed through a JavaScript-first API. It stores local JSON documents in a single `.wtdb` database file, with a small query builder, a compact text language for CLI and scripts, transactions, WAL recovery, and an experimental paged-storage layer for future lower-level engines.
 
@@ -1059,3 +1056,7 @@ Use the naming rules documented in [Data Model](#data-model).
 ## License
 
 MIT.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/AnThophicous/woton/main/Images/Woton.png" alt="Woton logo" width="180">
+</p>
