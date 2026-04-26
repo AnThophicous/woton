@@ -1,0 +1,59 @@
+{
+  "name": "woton",
+  "version": "0.2.0",
+  "description": "Encrypted embedded database for Node.js with a simple JavaScript-first API.",
+  "type": "module",
+  "license": "MIT",
+  "author": "",
+  "homepage": "https://github.com/AnThophicous/woton#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnThophicous/woton.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnThophicous/woton/issues"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "woton": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "SECURITY.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+    "build": "npm run clean && node ./node_modules/typescript/bin/tsc -p tsconfig.json",
+    "test": "npm run clean && node ./node_modules/typescript/bin/tsc -p tsconfig.test.json && node --test \"dist/__tests__/**/*.test.js\"",
+    "typecheck": "node ./node_modules/typescript/bin/tsc -p tsconfig.json --noEmit",
+    "benchmark:build": "node ./node_modules/typescript/bin/tsc -p benchmarks/tsconfig.json",
+    "benchmark": "npm run benchmark:build && node benchmarks/.build/run.js",
+    "benchmark:smoke": "npm run benchmark:build && node benchmarks/.build/run.js --smoke",
+    "release:check": "npm test && npm pack --dry-run",
+    "prepack": "npm run build"
+  },
+  "keywords": [
+    "database",
+    "embedded",
+    "encrypted",
+    "sqlite",
+    "typescript",
+    "node"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.17.19",
+    "typescript": "^5.7.3"
+  }
+}

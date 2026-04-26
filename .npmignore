@@ -1,0 +1,61 @@
+# Source and tests
+src/
+**/__tests__/
+*.test.*
+*.spec.*
+
+# Development and CI configuration
+.github/
+.gitignore
+tsconfig*.json
+benchmarks/
+
+# Dependencies and generated local output
+node_modules/
+dist/
+coverage/
+benchmarks/.build/
+benchmarks/results/
+benchmarks/tmp/
+
+# Runtime data
+*.wtdb
+*.wtdb-*
+*.wtdb-wal
+*.wtdb-lock
+*.wtdb.lock
+*.wtpg
+*.wtpg-*
+*.wtbc
+*.wtbc-*
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.tmp
+*.bak
+
+# Local environment
+.env
+.env.*
+
+# Logs and package tarballs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tgz
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Keep package-critical build output.
+!dist/
+!dist/*.js
+!dist/*.d.ts
+!dist/*.js.map
